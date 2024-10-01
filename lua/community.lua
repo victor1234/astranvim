@@ -6,10 +6,12 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.colorscheme.everforest" },
+  { import = 'astrocommunity.completion.copilot-cmp'},
   { import = 'astrocommunity.pack.python'},
   { import = 'astrocommunity.pack.markdown'},
-  { import = 'astrocommunity.completion.copilot-cmp'},
   { import = 'astrocommunity.markdown-and-latex.render-markdown-nvim'},
   { import = 'astrocommunity.markdown-and-latex.markdown-preview-nvim'},
   { import = 'astrocommunity.note-taking.obsidian-nvim'},
+  { import = 'astrocommunity.pack.cmake'},
+  { import = 'astrocommunity.pack.cpp'},
 }
