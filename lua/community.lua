@@ -10,5 +10,4 @@ return {
   { import = 'astrocommunity.pack.markdown'},
   { import = 'astrocommunity.markdown-and-latex.render-markdown-nvim'},
   { import = 'astrocommunity.markdown-and-latex.markdown-preview-nvim'},
-  { import = 'astrocommunity.pack.cpp'},
 }
