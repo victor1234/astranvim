@@ -1,15 +1,4 @@
 return {
-  -- Install bashls, shellcheck, shfmt
-  {
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
-    opts = function(_, opts)
-      opts.ensure_installed = require("astrocore").list_insert_unique(
-        opts.ensure_installed,
-        { "bash-language-server", "shellcheck", "shfmt" }
-      )
-    end,
-  },
-
   -- Format with shfmt
   {
     "stevearc/conform.nvim",
