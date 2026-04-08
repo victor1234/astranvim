@@ -7,5 +7,4 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.colorscheme.everforest" },
   -- { import = "astrocommunity.completion.copilot-cmp" },
-  { import = "astrocommunity.pack.markdown" },
 }
