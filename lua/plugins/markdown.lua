@@ -26,12 +26,20 @@ return {
   -- Render Markdown
   {
     "MeanderingProgrammer/render-markdown.nvim",
-    cmd = "RenderMarkdown",
-    ft = function()
-      local plugin = require("lazy.core.config").spec.plugins["render-markdown.nvim"]
-      local opts = require("lazy.core.plugin").values(plugin, "opts", false)
-      return opts.file_types or { "markdown" }
-    end,
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-mini/mini.icons",
+    },
+    ft = { "markdown" },
+    keys = {
+      {
+        "<leader>M",
+        function() require("render-markdown").buf_toggle() end,
+        desc = "Toggle Markdown rendering",
+      },
+    },
+    ---@module 'render-markdown'
+    ---@type render.md.UserConfig
+    opts = { anti_conceal = { enabled = false } },
   },
-
 }
