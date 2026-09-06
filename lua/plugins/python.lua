@@ -10,51 +10,6 @@ return {
     end,
   },
 
-  -- AstroLSP: basedpyright, ruff configurations
-  {
-    "AstroNvim/astrolsp",
-    optional = true,
-    opts = {
-      config = {
-        -- basedpyright
-        basedpyright = {
-          before_init = function(_, c)
-            c.settings = c.settings or {}
-            c.settings.python = c.settings.python or {}
-            c.settings.python.pythonPath = vim.fn.exepath "python"
-          end,
-          settings = {
-            basedpyright = {
-              disableOrganizeImports = true,
-              analysis = {
-                typeCheckingMode = "basic",
-                autoImportCompletions = true,
-                diagnosticSeverityOverrides = {
-                  reportUnusedImport = "information",
-                  reportUnusedFunction = "information",
-                  reportUnusedVariable = "information",
-                  reportGeneralTypeIssues = "none",
-                  reportOptionalMemberAccess = "none",
-                  reportOptionalSubscript = "none",
-                  reportPrivateImportUsage = "none",
-                },
-              },
-            },
-          },
-        },
-
-        -- ruff
-        ruff = {
-          on_attach = function(client)
-            client.server_capabilities.hoverProvider = false
-            client.server_capabilities.documentFormattingProvider = false
-            client.server_capabilities.documentRangeFormattingProvider = false
-          end,
-        },
-      },
-    },
-  },
-
   -- Formatter
   {
     "stevearc/conform.nvim",
